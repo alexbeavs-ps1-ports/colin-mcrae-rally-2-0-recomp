@@ -1,3 +1,5 @@
+<p align="center"><a href="https://alexbeavs-ps1-ports.github.io/psxrecomp-ports/"><img src="https://raw.githubusercontent.com/alexbeavs-ps1-ports/psxrecomp-ports/main/docs/assets/alexbeav-ps1-recomps-banner.png" alt="Alexbeav's PS1 Recomps" width="100%"></a></p>
+
 # Colin McRae Rally 2.0 Recompiled
 <!-- retcomm-readme-metrics -->
 [![GitHub downloads (all assets, all releases)](https://img.shields.io/github/downloads/Alexbeav/colin-mcrae-rally-2-0-recomp/total)](https://github.com/Alexbeav/colin-mcrae-rally-2-0-recomp/releases)
