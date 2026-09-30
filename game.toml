@@ -6,7 +6,9 @@ name = "Colin McRae Rally 2.0"
 id = "SLUS-01222"
 players = 1
 exe = "disc/SLUS_012.22"
-disc = ""
+disc = "disc/Colin McRae Rally 2.0 (USA) (En,Fr,Es).cue"
+discs = ["disc/Colin McRae Rally 2.0 (USA) (En,Fr,Es).cue"]
+disc_serials = ["SLUS-01222"]
 load_address = "0x80010000"
 entry_pc = "0x8003467C"
 text_size = "0x0004B000"
@@ -30,11 +32,13 @@ known_crc32 = [
 ]
 
 [recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
 seeds = "seeds/ghidra_funcs.txt"
 out_dir = "generated"
 strict = true
 
 [runtime]
+openbios = false
 window_title = "colin-mcrae-rally-2-0- Recompiled"
 memcard_dir = "saves"
 
