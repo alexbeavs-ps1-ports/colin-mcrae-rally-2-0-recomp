@@ -27,6 +27,9 @@ psxrecomp_add_game_runtime(psx-runtime
     ENABLE_SETUP_WIZARD
     WINDOW_TITLE "Colin McRae Rally 2.0 Recompiled"
     EXE_NAME "Colin_McRae_Rally_2_0_Recompiled"
+    # The five headerless disc overlays (BOOT, INTRO, SETUP, FRONTEND, GAME, all
+    # loaded at 0x8005AD9C), compiled ahead of time from aot/overlays.json.
+    GAME_OVERLAY_STATIC_C "${CMAKE_CURRENT_SOURCE_DIR}/generated/overlays_static.c"
     DEFAULT_GAME_CONFIG_PATH "game.toml"
     MAX_PLAYERS 1
     APP_ICON "${CMAKE_CURRENT_SOURCE_DIR}/assets/psxrecomp.ico"
