@@ -43,13 +43,22 @@ bios_hle = false
 window_title = "colin-mcrae-rally-2-0- Recompiled"
 memcard_dir = "saves"
 overlay_cache = true
+# Loads read a few vblanks, then decompress ~2 s: engage Fast Loading after 4 data-read vblanks of 60
+turbo_loads_window_reads = 4
 
 [video]
 renderer = "opengl"
 aspect_ratio = "4:3"
+# Sharp picture and Smooth motion by default (60 shown frames in a race)
+internal_resolution = "1080p"
+render_thread = true
+frame_generation = true
+frame_generation_ignore_near = 0.5
 
 [controller]
 default_mode = "digital"
+# Player 1 on the first connected controller by default (keyboard: choose it in the launcher)
+p1_device = "auto"
 
 # Online mount gate: digests + track count + optional TOC fingerprint
 # (see docs/NETPLAY.md).
