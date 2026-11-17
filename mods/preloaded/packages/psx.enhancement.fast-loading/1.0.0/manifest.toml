@@ -1,0 +1,47 @@
+format_version = 5
+id = "psx.enhancement.fast-loading"
+version = "1.0.0"
+name = "Fast Loading (host pacing)"
+author = "psxrecomp"
+description = "Deprecated generic loading detector retained for compatibility. New game integrations use title-owned resident loading or pacing at verified loading boundaries."
+resolver = "declarative"
+save_compatibility = "shared"
+
+# Compatibility-only: the heuristic is not a verified per-game loading policy.
+# Campaign titles exclude this package and own their loading implementations.
+[[target]]
+game_id = "*"
+
+[[feature]]
+id = "fast-loading"
+name = "Fast Loading (host pacing)"
+description = "Deprecated and disabled by default. This compatibility feature accelerates host pacing when a generic heuristic detects loading. It does not implement a game-specific loading contract."
+group = "Quality of Life"
+default_enabled = true  # CMR2: uncapped host pacing while loading
+hidden = true
+
+[[option]]
+feature = "fast-loading"
+id = "multiplier"
+label = "Host speed multiplier"
+description = "How much faster than real time a load may run. 1 is authentic. 2-32 is the useful range; larger values keep working but stop helping once the host, not the pacing, is the limit. Ignored while Uncapped is ticked."
+group = "Quality of Life"
+type = "integer"
+min = 1
+max = 1024
+step = 1
+default = 4
+disabled_by = "uncapped"
+
+[[option]]
+feature = "fast-loading"
+id = "uncapped"
+label = "Uncapped (as fast as the host allows)"
+description = "Run loads at whatever speed this machine can manage, ignoring the multiplier above."
+group = "Quality of Life"
+type = "boolean"
+default = "true"
+
+[[plugin]]
+feature = "fast-loading"
+id = "psx.fast-loading"
